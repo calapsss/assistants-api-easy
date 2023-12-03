@@ -25,8 +25,6 @@ def init():
     if "thread_id" not in st.session_state:
         st.session_state.thread_id = None
 
-
-
 def set_apikey():
     st.sidebar.header('Configure')
     api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
@@ -188,18 +186,17 @@ def chat_prompt(client, assistant_option):
             st.empty()
             chat_display(client)
 
-        
-
 def chat_display(client):
     st.session_state.messages = client.beta.threads.messages.list(
         thread_id=st.session_state.thread_id
     ).data
 
-    x = 0
-    for message in st.session_state.messages:
-        print(x)
-        print(message)
-        x += 1
+    #Used this for debugging
+    # x = 0
+    # for message in st.session_state.messages:
+    #     print(x)
+    #     print(message)
+    #     x += 1
 
     for message in reversed(st.session_state.messages):
         if message.role in ["user", "assistant"]:
