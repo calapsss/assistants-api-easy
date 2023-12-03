@@ -27,8 +27,12 @@ def init():
 
 def set_apikey():
     st.sidebar.header('Configure')
-    api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
-    return api_key
+    api_entry = st.sidebar.text_input("Enter your OpenAI API key", type="password")
+    if api_entry:
+        os.environ["OPENAI_API_KEY"] = api_entry
+
+    return True
+    
 
 def config(client):
     my_assistants = client.beta.assistants.list(
