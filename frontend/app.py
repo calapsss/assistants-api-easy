@@ -27,11 +27,9 @@ def init():
 
 def set_apikey():
     st.sidebar.header('Configure')
-    api_entry = st.sidebar.text_input("Enter your OpenAI API key", type="password")
-    if api_entry:
-        os.environ["OPENAI_API_KEY"] = api_entry
+    api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
 
-    return True
+    return api_key
     
 
 def config(client):
@@ -238,7 +236,7 @@ def main():
     st.divider()
     api_key = set_apikey()
     if api_key:
-        client = OpenAI()
+        client = OpenAI(api_key=api_key)
         assistant_option = config(client)
 
         if assistant_option == "create-assistant":
