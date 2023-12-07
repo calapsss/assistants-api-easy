@@ -26,6 +26,8 @@ def init():
         st.session_state.thread_id = None
 
 def set_apikey():
+    st.sidebar.header('Tutorial on How to Build This')
+    st.sidebar.markdown('For a detailed guide and demonstration, check out the [Assistants API Tutorial](https://www.youtube.com/watch?v=ZjpNx8qNnaA) on YouTube.')
     st.sidebar.header('Configure')
     api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
 
