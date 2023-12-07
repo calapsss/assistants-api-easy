@@ -27,7 +27,7 @@ def init():
 
 def set_apikey():
     st.sidebar.header('Tutorial on How to Build This')
-    st.sidebar.markdown('For a detailed guide and demonstration, check out the [Assistants API Tutorial](https://www.youtube.com/watch?v=ZjpNx8qNnaA) on YouTube.')
+    st.sidebar.markdown('🎥 For a detailed guide and demonstration, check out the [AnaLAssist Tutorial](https://www.youtube.com/watch?v=ZjpNx8qNnaA) on YouTube.')
     st.sidebar.header('Configure')
     api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password")
 
@@ -235,6 +235,7 @@ def chat_display(client):
 def main():
     st.title('AI AnalAssist 📈')
     st.caption('Data analysis assistant using OpenAI Assistants API')
+    st.markdown('🎥 For a detailed guide and demonstration, check out the [AnaLAssist Tutorial](https://www.youtube.com/watch?v=ZjpNx8qNnaA) on YouTube.')
     st.divider()
     api_key = set_apikey()
     if api_key:
