@@ -2,6 +2,12 @@
 
 This application is a Streamlit interface for interacting with OpenAI's AI assistants. It allows users to create assistants, upload files to them, send them messages, and view their responses.
 
+## Get Started
+
+For detailed instructions and a demonstration of AnaLAssist in action, check out my YouTube tutorial:
+
+📺 [Open AI Assistants API Tutorial](https://www.youtube.com/watch?v=ZjpNx8qNnaA)
+
 Here's a high-level overview of what each function does:
 
 - `init()`: Initializes session state variables.
