@@ -233,7 +233,7 @@ def chat_display(client):
     #             st.markdown(message[1])
 
 def main():
-    st.title('AI AnalAssist 📈')
+    st.title('AI Data Assistant 📈')
     st.caption('Data analysis assistant using OpenAI Assistants API')
     st.markdown('🎥 For a detailed guide and demonstration, check out the [Assistants API Tutorial](https://www.youtube.com/watch?v=ZjpNx8qNnaA) on YouTube.')
     st.divider()
